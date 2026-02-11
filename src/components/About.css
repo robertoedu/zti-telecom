@@ -1,0 +1,269 @@
+/* About Section */
+.about {
+  padding: 5rem 2rem;
+  background: #F5F7FA;
+  position: relative;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0D47A1;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.about-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #2E7D32;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.about-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666666;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Cards Informativos */
+.about-cards {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 20px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  border-color: #1976D2;
+}
+
+.info-card.highlight {
+  background: linear-gradient(135deg, #0D47A1, #1976D2);
+  color: #FFFFFF;
+  border-color: #0D47A1;
+}
+
+.info-card.highlight:hover {
+  border-color: #42A5F5;
+  box-shadow: 0 12px 35px rgba(13, 71, 161, 0.3);
+}
+
+.card-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: cardIconFloat 3s ease-in-out infinite;
+}
+
+.info-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0D47A1;
+  margin-bottom: 1rem;
+}
+
+.info-card.highlight h3 {
+  color: #FFFFFF;
+}
+
+.info-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0;
+}
+
+.info-card.highlight p {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.info-card strong {
+  color: #0D47A1;
+  font-weight: 600;
+}
+
+.info-card.highlight strong {
+  color: #2E7D32;
+  text-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
+}
+
+.card-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.card-cnpj {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  font-family: 'Courier New', monospace;
+  opacity: 0.9;
+}
+
+/* Valores */
+.about-values {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.value-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 1.5rem;
+  background: #FFFFFF;
+  border-radius: 50px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  color: #333333;
+}
+
+.value-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, #EEF2FF, #E3F2FD);
+}
+
+.value-icon {
+  font-size: 1.5rem;
+}
+
+@keyframes cardIconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Estatísticas */
+.about-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.stat-card {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  min-width: 150px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.stat-number {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0D47A1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 500;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-subtitle {
+    font-size: 1rem;
+  }
+
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-values {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .value-item {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+
+  .about-stats {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+}

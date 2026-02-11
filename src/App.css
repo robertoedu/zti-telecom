@@ -1,0 +1,41 @@
+/* App.css - Estilos da Aplicação Principal */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Garantir que não há overflow horizontal */
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Estilos de Acessibilidade */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Prevenção de layout shift */
+* {
+  box-sizing: border-box;
+}
+
+/* Loading State (opcional) */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: #0D47A1;
+}

@@ -1,0 +1,90 @@
+/* Landing Page - Container Principal */
+.landing-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Animação de Fade In ao Scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll Suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Seleção de Texto */
+::selection {
+  background: #1976D2;
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background: #1976D2;
+  color: #FFFFFF;
+}
+
+/* Scrollbar Personalizada */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F7FA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1976D2;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0D47A1;
+}
+
+/* Garantir responsividade de imagens */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remover espaçamentos padrão de últimos elementos */
+section > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Efeito de hover em links */
+a {
+  transition: all 0.3s ease;
+}
+
+/* Botões globais */
+button {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Transições suaves */
+* {
+  transition-property: transform, box-shadow, background, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+/* Remover transição de layout */
+*:not(a):not(button):not(.btn):not(.cta-btn):not(.navbar-menu):not(.whatsapp-button) {
+  transition-property: none;
+}
+
+/* Adicionar transição apenas onde necessário */
+a, button, .btn, .cta-btn, .card, .plan-card, .differential-card, .navbar-menu, .whatsapp-button {
+  transition: all 0.3s ease;
+}
