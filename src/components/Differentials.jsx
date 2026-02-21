@@ -12,13 +12,13 @@ const Differentials = () => {
       icon: "🔒",
       title: "Internet Estável Sem Quedas",
       description:
-        "Conexão confiável e estável 24 horas por dia, 7 dias por semana.",
+        "Conexão confiável e estável, garantindo sua navegação ininterrupta.",
     },
     {
       icon: "🛠️",
-      title: "Suporte Técnico 24h",
+      title: "Suporte Técnico Especializado",
       description:
-        "Equipe técnica pronta para te atender a qualquer hora do dia ou da noite.",
+        "Equipe técnica qualificada pronta para resolver seus problemas.",
     },
     {
       icon: "⭐",

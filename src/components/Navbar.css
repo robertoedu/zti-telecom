@@ -79,6 +79,11 @@
   width: 100%;
 }
 
+/* Central do Cliente no menu mobile */
+.navbar-central-mobile {
+  display: none;
+}
+
 /* Botão CTA */
 .navbar-cta {
   background: #2E7D32;
@@ -103,13 +108,20 @@
   display: none;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
+  align-items: center;
+  gap: 6px;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
   width: 40px;
   height: 40px;
+  position: relative;
+  outline: none;
+}
+
+.navbar-toggle:focus {
+  outline: none;
 }
 
 .navbar-toggle span {
@@ -118,10 +130,25 @@
   background: #FFFFFF;
   border-radius: 3px;
   transition: all 0.3s ease;
+  display: block;
+  position: absolute;
+}
+
+.navbar-toggle span:nth-child(1) {
+  top: 12px;
+}
+
+.navbar-toggle span:nth-child(2) {
+  top: 19px;
+}
+
+.navbar-toggle span:nth-child(3) {
+  top: 26px;
 }
 
 .navbar-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  top: 19px;
+  transform: rotate(45deg);
 }
 
 .navbar-toggle.active span:nth-child(2) {
@@ -129,7 +156,8 @@
 }
 
 .navbar-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  top: 19px;
+  transform: rotate(-45deg);
 }
 
 /* Responsividade */
@@ -160,6 +188,33 @@
   }
 
   .navbar-menu li a::after {
+    display: none;
+  }
+
+  .navbar-central-mobile {
+    display: block;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .navbar-central-mobile a {
+    display: block;
+    background: #2E7D32;
+    color: #FFFFFF;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-central-mobile a:hover {
+    background: #1B5E20;
+    transform: scale(1.02);
+  }
+
+  .navbar-central-mobile a::after {
     display: none;
   }
 

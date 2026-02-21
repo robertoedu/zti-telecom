@@ -61,7 +61,7 @@ const CTA = () => {
         {/* Garantia */}
         <div className="cta-guarantee">
           <span className="guarantee-icon">✓</span>
-          <p>Garantia de qualidade e suporte 24 horas por dia</p>
+          <p>Garantia de qualidade e velocidade real contratada</p>
         </div>
       </div>
 

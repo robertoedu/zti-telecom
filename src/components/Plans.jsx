@@ -1,24 +1,12 @@
-import { useState } from "react";
 import "./Plans.css";
 
 const Plans = () => {
-  const [activeCategory, setActiveCategory] = useState("urbanos");
-
-  const urbanPlans = [
-    { name: "60 Mega", download: "60", upload: "30", recommended: false },
-    { name: "120 Mega", download: "120", upload: "60", recommended: false },
-    { name: "200 Mega", download: "200", upload: "100", recommended: true },
+  const plans = [
     { name: "300 Mega", download: "300", upload: "150", recommended: false },
+    { name: "500 Mega", download: "500", upload: "250", recommended: true },
+    { name: "700 Mega", download: "700", upload: "350", recommended: false },
+    { name: "900 Mega", download: "900", upload: "450", recommended: false },
   ];
-
-  const ruralPlans = [
-    { name: "5 Mega", download: "5", upload: "3", recommended: false },
-    { name: "10 Mega", download: "10", upload: "5", recommended: false },
-    { name: "15 Mega", download: "15", upload: "8", recommended: true },
-    { name: "20 Mega", download: "20", upload: "10", recommended: false },
-  ];
-
-  const plans = activeCategory === "urbanos" ? urbanPlans : ruralPlans;
 
   const handleConsultar = (planName) => {
     const message = `Olá! Gostaria de saber mais sobre o plano ${planName}.`;
@@ -33,22 +21,6 @@ const Plans = () => {
       <div className="plans-container">
         <h2 className="plans-title">Planos de Internet Fibra Óptica</h2>
         <p className="plans-subtitle">Garantia de 100% da banda contratada</p>
-
-        {/* Toggle de Categoria */}
-        <div className="plans-toggle">
-          <button
-            className={`toggle-btn ${activeCategory === "urbanos" ? "active" : ""}`}
-            onClick={() => setActiveCategory("urbanos")}
-          >
-            🏙️ Planos Urbanos
-          </button>
-          <button
-            className={`toggle-btn ${activeCategory === "rurais" ? "active" : ""}`}
-            onClick={() => setActiveCategory("rurais")}
-          >
-            🌾 Planos Rurais
-          </button>
-        </div>
 
         {/* Grid de Planos */}
         <div className="plans-grid">
@@ -92,10 +64,6 @@ const Plans = () => {
               <div className="plan-features">
                 <div className="feature">
                   <span className="check-icon">✓</span>
-                  <span>Suporte Técnico 24h</span>
-                </div>
-                <div className="feature">
-                  <span className="check-icon">✓</span>
                   <span>100% Fibra Óptica</span>
                 </div>
                 <div className="feature">
@@ -105,6 +73,10 @@ const Plans = () => {
                 <div className="feature">
                   <span className="check-icon">✓</span>
                   <span>Acesso Ilimitado</span>
+                </div>
+                <div className="feature">
+                  <span className="check-icon">✓</span>
+                  <span>Wi-Fi Grátis</span>
                 </div>
               </div>
 

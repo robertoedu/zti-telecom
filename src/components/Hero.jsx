@@ -51,7 +51,7 @@ const Hero = () => {
             </div>
             <div className="badge">
               <span className="badge-icon">🛡️</span>
-              <span>Suporte 24h</span>
+              <span>Sem Fidelidade</span>
             </div>
           </div>
         </div>

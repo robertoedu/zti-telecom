@@ -72,12 +72,12 @@ const About = () => {
             <div className="stat-label">Fibra Óptica</div>
           </div>
           <div className="stat-card">
-            <div className="stat-number">24/7</div>
-            <div className="stat-label">Suporte</div>
-          </div>
-          <div className="stat-card">
             <div className="stat-number">1000+</div>
             <div className="stat-label">Clientes</div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-number">5+</div>
+            <div className="stat-label">Anos de Experiência</div>
           </div>
         </div>
       </div>

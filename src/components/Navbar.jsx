@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+  const toggleRef = useRef(null);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -11,6 +13,26 @@ const Navbar = () => {
       setIsMenuOpen(false);
     }
   };
+
+  // Fechar menu ao clicar fora
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isMenuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        toggleRef.current &&
+        !toggleRef.current.contains(event.target)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   return (
     <nav className="navbar">
@@ -22,7 +44,7 @@ const Navbar = () => {
         </div>
 
         {/* Menu Desktop */}
-        <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
+        <ul ref={menuRef} className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
           <li>
             <a onClick={() => scrollToSection("inicio")}>Início</a>
           </li>
@@ -41,11 +63,20 @@ const Navbar = () => {
           <li>
             <a onClick={() => scrollToSection("contato")}>Contato</a>
           </li>
+          <li className="navbar-central-mobile">
+            <a
+              href="https://central.ztitelecom.com.br/central_assinante_web/login"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Central do Cliente
+            </a>
+          </li>
         </ul>
 
         {/* Botão CTA */}
         <a
-          href="https://wa.me/5551985099089?text=Olá! Gostaria de saber mais sobre os planos de internet."
+          href="https://central.ztitelecom.com.br/central_assinante_web/login"
           target="_blank"
           rel="noopener noreferrer"
           className="navbar-cta"
@@ -55,6 +86,7 @@ const Navbar = () => {
 
         {/* Menu Hamburguer Mobile */}
         <button
+          ref={toggleRef}
           className={`navbar-toggle ${isMenuOpen ? "active" : ""}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Menu"
