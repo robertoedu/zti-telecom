@@ -44,7 +44,10 @@ const Navbar = () => {
         </div>
 
         {/* Menu Desktop */}
-        <ul ref={menuRef} className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
+        <ul
+          ref={menuRef}
+          className={`navbar-menu ${isMenuOpen ? "active" : ""}`}
+        >
           <li>
             <a onClick={() => scrollToSection("inicio")}>Início</a>
           </li>
