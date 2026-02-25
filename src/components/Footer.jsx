@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="footer-section">
             <div className="footer-logo" onClick={scrollToTop}>
               <img
-                src="/logo-zti.png"
+                src="/zti-telecom/logo-zti.png"
                 alt="ZTI Telecom"
                 className="logo-image"
               />

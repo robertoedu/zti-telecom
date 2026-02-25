@@ -39,7 +39,11 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Logo */}
         <div className="navbar-logo" onClick={() => scrollToSection("inicio")}>
-          <img src="/logo-zti.png" alt="ZTI Telecom" className="logo-image" />
+          <img
+            src="/zti-telecom/logo-zti.png"
+            alt="ZTI Telecom"
+            className="logo-image"
+          />
         </div>
 
         {/* Menu Desktop */}
