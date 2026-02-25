@@ -61,7 +61,7 @@ const Hero = () => {
           <div className="image-wrapper">
             <div className="speed-indicator">
               <div className="speed-circle">
-                <span className="speed-number">1000</span>
+                <span className="speed-number">900</span>
                 <span className="speed-unit">Mbps</span>
               </div>
               <div className="speed-bars">

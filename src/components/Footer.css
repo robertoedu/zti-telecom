@@ -26,22 +26,28 @@
 /* Logo */
 .footer-logo {
   display: flex;
-  align-items: baseline;
-  gap: 0.4rem;
-  margin-bottom: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.logo-text {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  font-family: 'Poppins', sans-serif;
+.footer-logo:hover {
+  transform: scale(1.05);
 }
 
-.logo-subtext {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #42A5F5;
+.footer-logo .logo-image {
+  height: 75px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.2);
+  display: block;
+}
+
+/* Remove old text styles */
+.footer-logo .logo-text,
+.footer-logo .logo-subtext {
+  display: none;
 }
 
 .footer-tagline {
@@ -206,6 +212,10 @@
 
   .footer-logo {
     justify-content: center;
+  }
+
+  .footer-logo .logo-image {
+    height: 40px;
   }
 
   .footer-social {

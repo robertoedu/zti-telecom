@@ -12,9 +12,12 @@ const Footer = () => {
         <div className="footer-content">
           {/* Logo e Descrição */}
           <div className="footer-section">
-            <div className="footer-logo">
-              <span className="logo-text">ZTI</span>
-              <span className="logo-subtext">Telecom</span>
+            <div className="footer-logo" onClick={scrollToTop}>
+              <img
+                src="/logo-zti.png"
+                alt="ZTI Telecom"
+                className="logo-image"
+              />
             </div>
             <p className="footer-tagline">
               Internet estável, rápida e sem complicações.
