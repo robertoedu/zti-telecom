@@ -68,7 +68,7 @@ const Footer = () => {
             <h4>Nossos Endereços</h4>
             <ul className="footer-addresses">
               <li>
-                <strong>Escritório Centro</strong>
+                <strong>Matriz</strong>
                 <p>
                   Rua Sete de Setembro, 1073
                   <br />
