@@ -73,11 +73,7 @@ const Coverage = () => {
             <span className="contact-icon">🕒</span>
             <div>
               <strong>Atendimento Comercial</strong>
-              <p>
-                Seg - Sex: 08h às 18h
-                <br />
-                Sáb: 08h às 11h30
-              </p>
+              <p>Seg - Sex: 08h às 11:30h & 13:30h às 18h</p>
             </div>
           </div>
         </div>
