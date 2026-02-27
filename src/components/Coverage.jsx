@@ -30,7 +30,7 @@ const Coverage = () => {
               <span className="area-icon">🏙️</span>
               <h4>Área Urbana</h4>
               <p>
-                Cobertura completa em Gramado Xavier com planos de até 300 Mega
+                Cobertura completa em Gramado Xavier com planos de até 900 Mega
               </p>
             </div>
             <div className="area-card">
