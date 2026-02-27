@@ -2,7 +2,6 @@ import "./Plans.css";
 
 const Plans = () => {
   const plans = [
-    { name: "300 Mega", download: "300", upload: "150", recommended: false },
     { name: "500 Mega", download: "500", upload: "250", recommended: true },
     { name: "700 Mega", download: "700", upload: "350", recommended: false },
     { name: "900 Mega", download: "900", upload: "450", recommended: false },
