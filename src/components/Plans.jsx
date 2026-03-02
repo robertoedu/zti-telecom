@@ -66,8 +66,8 @@ const Plans = () => {
                   <span>100% Fibra Óptica</span>
                 </div>
                 <div className="feature">
-                  <span className="check-icon">✓</span>
-                  <span>Sem Fidelidade</span>
+                  <span className="check-icon">✔</span>
+                  <span>Fidelidade Opcional</span>
                 </div>
                 <div className="feature">
                   <span className="check-icon">✓</span>
